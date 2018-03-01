@@ -7,4 +7,4 @@ function filterByAge(minAge, nameA, ageA, nameB, ageB) {
         console.log(personB);
 }
 
-filterByAge(12, 'Ivan', 15, 'Asen', 9)
+filterByAge(12, 'Ivan', 15, 'Asen', 9);

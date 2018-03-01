@@ -8,6 +8,6 @@ function countLetter(str, letter) {
     return count;
 }
 
-console.log(countLetter('hello', 'l'))
-console.log(`-`.repeat(2))
-console.log(countLetter('panther', 'n'))
+console.log(countLetter('hello', 'l'));
+console.log(`-`.repeat(2));
+console.log(countLetter('panther', 'n'));

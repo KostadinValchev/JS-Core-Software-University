@@ -7,6 +7,6 @@ function distanceBetweenPoints(x1, y1, x2, y2) {
     return Math.sqrt(distanceX + distanceY);
 }
 
-console.log(distanceBetweenPoints(2, 4, 5, 0))
-console.log('-'.repeat(5))
-console.log(distanceBetweenPoints(2.34, 15.66, -13.55, -2.9985))
+console.log(distanceBetweenPoints(2, 4, 5, 0));
+console.log('-'.repeat(5));
+console.log(distanceBetweenPoints(2.34, 15.66, -13.55, -2.9985));
