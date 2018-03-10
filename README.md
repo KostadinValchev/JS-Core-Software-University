@@ -1,1 +1,1 @@
-# JS-Core---Software-University
+# Source code for my JS homework in Software University
