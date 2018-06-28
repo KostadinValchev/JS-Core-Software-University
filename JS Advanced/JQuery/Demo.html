@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<p>This is a <a href="https://softuni.bg">link</a>.
+</p>
+<ul>
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+</ul>
+
+<script>
+    $(function () {
+        $('body *').on('click', function (event) {
+            $(this).fadeOut();
+            $('body').append($(this).text());
+            event.stopPropagation();
+        })
+    })
+</script>
+</body>
+</html>
