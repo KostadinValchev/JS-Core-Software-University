@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Car Tube</title>
+    <link rel="stylesheet" href="style/site.css">
+    <link rel="stylesheet" href="style/welcome.css">
+    <link rel="stylesheet" href="style/car-listings.css">
+    <link rel="stylesheet" href="style/login-register.css">
+    <link rel="stylesheet" href="style/my-listings.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/navigation.css">
+    <link rel="stylesheet" href="style/notifications.css">
+    <link rel="stylesheet" href="style/listing-details.css">
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="../node_modules/sammy/lib/sammy.js"></script>
+    <script src="../node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+    <script src="./scripts/app.js"></script>
+
+    <script src="./scripts/remote.js"></script>
+    <script src="./scripts/notify.js"></script>
+    <script src="./scripts/services/authService.js"></script>
+    <script src="./scripts/services/carService.js"></script>
+
+</head>
+
+<body>
+
+<div id="container">
+
+</div>
+
+<div id="notifications">
+    <div id="loadingBox" class="notification">
+        <span>Loading …</span>
+    </div>
+    <div id="infoBox" class="notification">
+        <span>Info</span>
+    </div>
+    <div id="errorBox" class="notification">
+        <span>Error</span>
+    </div>
+</div>
+
+</body>
+
+</html>
