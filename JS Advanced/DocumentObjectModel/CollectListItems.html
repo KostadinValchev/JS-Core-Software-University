@@ -15,12 +15,12 @@
 <button onclick="extractText()">Extract Text</button>
 <script>
     function extractText() {
-        let liArr = document.getElementsByTagName('li')
-        let li = []
+        let liArr = document.getElementsByTagName('li');
+        let li = [];
         for (let l of liArr) {
-            li.push(l.textContent)
+            li.push(l.textContent);
         }
-        document.getElementById('result').value = li.join('\n')
+        document.getElementById('result').value = li.join('\n');
     }
 </script>
 </body>

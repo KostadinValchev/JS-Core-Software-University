@@ -19,23 +19,23 @@ function monkeyPatcher(command) {
 
             if (totalVotes >= 10) {
                 if (upVotes / totalVotes > 0.66) {
-                    rating = 'hot'
+                    rating = 'hot';
                 } else if (totalScore >= 0 && (upVotes > 100 || downVotes > 100)) {
-                    rating = 'controversial'
+                    rating = 'controversial';
                 } else if (totalScore < 0) {
-                    rating = 'unpopular'
+                    rating = 'unpopular';
                 } else {
-                    rating = 'new'
+                    rating = 'new';
                 }
             }
             else if (totalVotes < 10) {
-                rating = 'new'
+                rating = 'new';
             }
 
-            return [upVotes + reportedAmount, downVotes + reportedAmount, totalScore, rating]
+            return [upVotes + reportedAmount, downVotes + reportedAmount, totalScore, rating];
         }
-    }
-    return commands[command]()
+    };
+    return commands[command]();
 }
 
 
@@ -46,11 +46,11 @@ let post = {
     upvotes: 100,
     downvotes: 100
 };
-monkeyPatcher.call(post, 'upvote')
-monkeyPatcher.call(post, 'downvote')
-let score = monkeyPatcher.call(post, 'score')
-console.log(score)// [127, 127, 0, 'controversial']
+monkeyPatcher.call(post, 'upvote');
+monkeyPatcher.call(post, 'downvote');
+let score = monkeyPatcher.call(post, 'score');
+console.log(score);// [127, 127, 0, 'controversial']
 for (let i = 0; i < 50; i++) {
-    monkeyPatcher.call(post, 'downvote')
+    monkeyPatcher.call(post, 'downvote');
 }      // (executed 50 times)
-console.log(score = monkeyPatcher.call(post, 'score'))
+console.log(score = monkeyPatcher.call(post, 'score'));

@@ -21,11 +21,11 @@ function bmi(name, age, weight, height) {
         },
         BMI: bmiCalc,
         status: status
-    }
+    };
     if(status === 'obese'){
         person['recommendation'] = 'admission required';
     }
     return person;
 }
 
-console.log(bmi("Peter", 29, 75, 182));;
+console.log(bmi("Peter", 29, 75, 182));

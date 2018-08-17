@@ -6,12 +6,12 @@ function currencyFormatter(separator, symbol, symbolFirst, value) {
 }
 function getDollarFormatter(formatter) {
     function dollarFormatter(value) {
-        return formatter(',', '$', true, value)
+        return formatter(',', '$', true, value);
     }
-    return dollarFormatter
+    return dollarFormatter;
 }
 
 
 let formatter = getDollarFormatter(currencyFormatter);
 
-console.log(formatter(5345));;
+console.log(formatter(5345));

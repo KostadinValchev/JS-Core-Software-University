@@ -8,7 +8,7 @@ function add(num) {
 
     calc.toString = function () {
         return sum
-    }
+    };
 
     return calc;
 }

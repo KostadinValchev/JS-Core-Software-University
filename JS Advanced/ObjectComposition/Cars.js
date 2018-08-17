@@ -7,7 +7,7 @@ function solve(input) {
             let name = arr[0];
             if (arr.length > 2) {
                 let inheritName = arr[2];
-                result[name] = Object.create(result[inheritName])
+                result[name] = Object.create(result[inheritName]);
             } else {
                 result[name] = {};
             }
@@ -24,13 +24,13 @@ function solve(input) {
             let output = [];
             let name = arr[0];
             for (let key in result[name]) {
-                output.push(key + ":" + result[name][key])
+                output.push(key + ":" + result[name][key]);
             }
             console.log(output.join(', '));
         }
 
         return {create, set, print}
-    }())
+    }());
 
     for (let inputElement of input) {
         let tokens = inputElement.split(' ');

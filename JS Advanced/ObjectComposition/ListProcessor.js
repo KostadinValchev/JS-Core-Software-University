@@ -16,7 +16,7 @@ function solution(arr) {
         }
 
         return {add, remove, print}
-    }())
+    }());
 
     for (let element of arr) {
         let [command, value] = element.split(' ');

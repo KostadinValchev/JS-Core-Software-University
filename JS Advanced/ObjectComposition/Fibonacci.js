@@ -5,7 +5,7 @@ function getFibonator() {
         let next = first + second;
         first = second;
         second = next;
-        return first
+        return first;
     }
 }
 

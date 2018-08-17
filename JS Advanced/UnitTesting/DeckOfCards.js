@@ -28,7 +28,7 @@ function printDeckOfCards(arr) {
             arr[i] = makeCard(card, suit);
         } catch (ex) {
             console.log("Invalid card: " + arr[i]);
-            return
+            return;
         }
     }
     console.log(arr.join(" "));

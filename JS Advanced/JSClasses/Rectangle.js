@@ -1,8 +1,8 @@
 class Rectangle {
     constructor(width, height, color){
-        this.width = width
-        this.height = height
-        this.color = color
+        this.width = width;
+        this.height = height;
+        this.color = color;
     }
 
     calcArea() {
@@ -10,6 +10,6 @@ class Rectangle {
     }
 }
 
-let rect = new Rectangle(2, 5)
+let rect = new Rectangle(2, 5);
 
-console.log(rect.calcArea())
+console.log(rect.calcArea());

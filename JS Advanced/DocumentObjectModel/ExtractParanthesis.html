@@ -12,18 +12,18 @@
 </p>
 
 <script>
-    window.onload = extract('content')
+    window.onload = extract('content');
 
     function extract(id) {
-        let text = document.getElementById(id).textContent
-        let regex = /\(([^)]+)\)/g
-        let arr = []
-        let match = regex.exec(text)
+        let text = document.getElementById(id).textContent;
+        let regex = /\(([^)]+)\)/g;
+        let arr = [];
+        let match = regex.exec(text);
         while (match) {
-            arr.push(match[1])
-            match = regex.exec(text)
+            arr.push(match[1]);
+            match = regex.exec(text);
         }
-        return arr.join('; ')
+        return arr.join('; ');
     }
 </script>
 </body>

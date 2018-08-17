@@ -4,7 +4,7 @@ function robot() {
         carbohydrate: 0,
         fat: 0,
         flavour: 0
-    }
+    };
 
     let recipes = {
         'apple': { carbohydrate: 1, flavour: 2 },
@@ -32,7 +32,7 @@ function robot() {
 
     }
     function report() {
-        return `protein=${ingredients.protein} carbohydrate=${ingredients.carbohydrate} fat=${ingredients.fat} flavour=${ingredients.flavour}`
+        return `protein=${ingredients.protein} carbohydrate=${ingredients.carbohydrate} fat=${ingredients.fat} flavour=${ingredients.flavour}`;
     }
 
     return function commandParser(input) {

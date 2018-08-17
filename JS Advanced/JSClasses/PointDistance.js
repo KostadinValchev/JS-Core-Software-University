@@ -1,11 +1,11 @@
 class Point {
     constructor(x, y) {
-        this.x = x
-        this.y = y
+        this.x = x;
+        this.y = y;
     }
 
     static distance(x, y) {
-        return Math.sqrt(Math.pow((y.x - x.x), 2) + Math.pow((x.y - y.y), 2))
+        return Math.sqrt(Math.pow((y.x - x.x), 2) + Math.pow((x.y - y.y), 2));
     }
 }
 

@@ -1,17 +1,17 @@
 class Circle {
     constructor (radius) {
-        this.radius = radius
+        this.radius = radius;
     }
     get diameter() {
-        return this.radius * 2
+        return this.radius * 2;
     }
 
     set diameter(newDiameter) {
-        this.radius = newDiameter / 2
+        this.radius = newDiameter / 2;
     }
 
     get area() {
-        return Math.PI * this.radius * this.radius
+        return Math.PI * this.radius * this.radius;
     }
 }
 
