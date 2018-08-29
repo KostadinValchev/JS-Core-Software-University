@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bus route</title>
+    <style>
+        body{padding:30px;display:flex;flex-direction:row}section{width:250px;margin:0 50px;background:#DEEAEE;padding:0 25px}h2,h3{text-align:center}h3{margin:0}ol,ul{
+                                                                                                                                                                      padding:0 20px}button{margin:5px auto}li{padding:2px 5px}li:nth-child(even){
+                                                                                                                                                                                                                                   background:#EAF7FB}li:nth-child(odd){background:#C6D1D4}#enter-stops{padding:25px 10px}#enter-stops>*{display:block;padding:10px 35px}#selected-bus-stops li:first-child{background:#b1cbbb}#selected-bus-stops li:last-child{background:#eea29a}#enter-stops h2{margin:0;text-align:left}span{color:#485788}
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<section>
+    <h2>Given bus route</h2>
+    <ol id="bus-stops" type="1">
+        <!-- Select bus stops from here -->
+    </ol>
+</section>
+
+<div class="wrapper">
+    <section id="enter-stops">
+        <h2>Enter bus stops:</h2>
+        <label>First bus stop's number:
+            <input name="first-stop" type="number">
+        </label>
+        <label>Last bus stop's number:
+            <input name="last-stop" type="number">
+        </label>
+        <button onclick="busRoute()">Enter</button>
+    </section>
+</div>
+
+<section>
+    <h2>Selected route</h2>
+    <h3 id="selected-route">Bus stops: <span>none</span></h3>
+    <ul id="selected-bus-stops">
+        <!-- Display your selected bus stops here -->
+    </ul>
+</section>
+
+<script>
+
+    function busRoute() {
+        let firstStopInput = $('input[name="first-stop"]');
+        let lastStopInput = $('input[name="last-stop"]');
+        let firstStopNum = Number(firstStopInput.val());
+        let lastStopNum = Number(lastStopInput.val());
+        let allBusStops = $('#bus-stops > li');
+        let busStopsTarget = $('#selected-bus-stops');
+        if (firstStopNum > 0 && lastStopNum <= allBusStops.length && firstStopNum < lastStopNum) {
+            $('#selected-route > span').text(firstStopNum + '-' + lastStopNum);
+            busStopsTarget.empty();
+            for (let i = firstStopNum -1; i <= lastStopNum -1; i++) {
+                let text = $(allBusStops[i]).text();
+                let li = $('<li>').text(text);
+                busStopsTarget.append(li)
+            }
+            firstStopInput.val('');
+            lastStopInput.val('');
+        }
+    }
+
+
+    $(() => {
+        let busStops = [
+            "Gen. Gurko St.",
+            "Sofia University",
+            "Eagles' Bridge Sq.",
+            "Bulgarian News Agency",
+            "Peyo Yavorov Blvd.",
+            "Aleksandar Zhendov Bvld.",
+            // You can add/remove bus stops from here
+        ];
+
+        let listBusStops = $('#bus-stops');
+        for (let i = 0; i < busStops.length; i++) {
+            const busStopLi = $('<li>').text(busStops[i]);
+
+            listBusStops.append(busStopLi);
+        }
+    })
+</script>
+</body>
+</html>
